@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWQ-cu-fIS">
+                                <rect key="frame" x="250" y="609" width="123" height="109"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="plusButton">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Нажми меня чтобы значение счетчика увеличилось на 1">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" :)">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Нажми меня кнопка увеличения счетчика :)">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bql-ft-Qbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-Kj-oAx">
+                                <rect key="frame" x="140" y="609" width="113" height="109"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Нажми меня кнопка уменьшения счетчика :)">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z32-kr-Yq9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQi-KX-Tjm">
+                                <rect key="frame" x="20" y="609" width="123" height="109"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Нажми меня кнопка обнуления :)">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RY-p3-IyV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тут меняется значение счетчика :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3p-6F-vFo">
+                                <rect key="frame" x="20" y="79" width="353" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Тут текстовое поле скроллится, но при этом оно заблокировано для редактирования пользователем :)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U7O-wN-6rE">
+                                <rect key="frame" x="20" y="309" width="353" height="259"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o3p-6F-vFo" secondAttribute="trailing" constant="20" id="8jh-Vc-gaD"/>
+                            <constraint firstItem="ZQi-KX-Tjm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="550" id="BgP-sR-nm7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U7O-wN-6rE" secondAttribute="trailing" constant="20" id="Bvd-MH-q19"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yWQ-cu-fIS" secondAttribute="bottom" constant="100" id="C2B-Hs-ZRS"/>
+                            <constraint firstItem="U7O-wN-6rE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EZI-e0-UJF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZQi-KX-Tjm" secondAttribute="bottom" constant="100" id="Qfs-8N-Qdf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xw-Kj-oAx" secondAttribute="trailing" constant="140" id="Qjh-lR-QdW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o3p-6F-vFo" secondAttribute="bottom" constant="650" id="RLe-BT-ASg"/>
+                            <constraint firstItem="o3p-6F-vFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wez-RL-uWf"/>
+                            <constraint firstItem="0xw-Kj-oAx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="550" id="Xqm-hA-PGv"/>
+                            <constraint firstItem="ZQi-KX-Tjm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bZB-9d-1nS"/>
+                            <constraint firstItem="yWQ-cu-fIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="550" id="dIX-XQ-WQj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZQi-KX-Tjm" secondAttribute="trailing" constant="250" id="dpG-uA-w9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yWQ-cu-fIS" secondAttribute="trailing" constant="20" id="ezs-fb-Cvl"/>
+                            <constraint firstItem="0xw-Kj-oAx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="fo9-rw-agr"/>
+                            <constraint firstItem="U7O-wN-6rE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="ih7-wc-bTy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xw-Kj-oAx" secondAttribute="bottom" constant="100" id="lhr-BW-Iht"/>
+                            <constraint firstItem="yWQ-cu-fIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="250" id="oPD-UO-1JB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U7O-wN-6rE" secondAttribute="bottom" constant="250" id="tln-qP-ImA"/>
+                            <constraint firstItem="o3p-6F-vFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zXd-Si-QRZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="o3p-6F-vFo" id="Co7-DX-h4I"/>
+                        <outlet property="historyTextView" destination="U7O-wN-6rE" id="gc7-8t-YpS"/>
+                        <outlet property="minusButton" destination="0xw-Kj-oAx" id="iv8-28-2Hx"/>
+                        <outlet property="plusButton" destination="yWQ-cu-fIS" id="8BK-Ny-Lh4"/>
+                        <outlet property="resetButton" destination="ZQi-KX-Tjm" id="8H5-4O-yCO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
