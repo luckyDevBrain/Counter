@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  @IBOutlet weak var counterLabel: UILabel!
-  @IBOutlet weak var plusButton: UIButton!
-  @IBOutlet weak var minusButton: UIButton!
-  @IBOutlet weak var resetButton: UIButton!
-  @IBOutlet weak var historyTextView: UITextView!
+  @IBOutlet private weak var counterLabel: UILabel!
+  @IBOutlet private weak var plusButton: UIButton!
+  @IBOutlet private weak var minusButton: UIButton!
+  @IBOutlet private weak var resetButton: UIButton!
+  @IBOutlet private weak var historyTextView: UITextView!
    
   private var count = 0
   private let dateFormatter: DateFormatter = {
@@ -60,13 +60,13 @@ class ViewController: UIViewController {
     historyTextView.scrollRangeToVisible(NSRange(location: historyTextView.text.count - 1, length: 1))
   }
 
-  @IBAction func plusButtonTapped(_ sender: Any) {
+  @IBAction private func plusButtonTapped(_ sender: Any) {
     count += 1
     updateDisplay()
     addToHistory("\n значение изменено на +1")
   }
 
-  @IBAction func minusButtonTapped(_ sender: Any) {
+  @IBAction private func minusButtonTapped(_ sender: Any) {
     if count > 0 {
       count -= 1
       updateDisplay()
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     }
   }
 
-  @IBAction func resetButtonTapped(_ sender: Any) {
+  @IBAction private func resetButtonTapped(_ sender: Any) {
     count = 0
     updateDisplay()
     addToHistory("\n значение сброшено")
